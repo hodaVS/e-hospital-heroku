@@ -20,6 +20,12 @@ code {
   animation: spin 1s linear infinite;
   margin: 0 auto;
 }
+.welcome-message {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0 20px 0;
+  text-align: center;
+}
 .form-container textarea {
   width: 100%; 
   min-height: 40px; 
