@@ -100,6 +100,10 @@ h1 {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -148,6 +152,11 @@ h1 {
   border: none;
   border-radius: 10px;
   width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  white-space: nowrap;
   text-align: center;
   transition: background-color 0.3s ease;
 }
