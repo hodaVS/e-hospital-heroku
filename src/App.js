@@ -12,6 +12,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioBlob, setAudioBlob] = useState(null);
   const audioRef = useRef(null);
+  const textareaRef = useRef(null);
 
   const {
     status,
