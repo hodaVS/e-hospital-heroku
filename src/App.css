@@ -20,6 +20,23 @@ code {
   animation: spin 1s linear infinite;
   margin: 0 auto;
 }
+.form-container textarea {
+  width: 100%; 
+  min-height: 40px; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 16px; 
+  box-sizing: border-box; 
+  overflow: hidden; 
+  line-height: 1.5; 
+}
+
+.form-container textarea:focus {
+  outline: none; 
+  border-color: #007bff; 
+}
+
 
 @keyframes spin {
   to { transform: rotate(360deg); }
