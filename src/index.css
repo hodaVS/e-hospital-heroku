@@ -107,6 +107,12 @@ h1 {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.form-container button img,
+.form-container button svg {
+  width: 20px;
+  height: 20px;
+}
+
 .form-container button:hover {
   background-color: #2980b9;
   transform: translateY(-2px);
@@ -151,14 +157,19 @@ h1 {
   color: white;
   border: none;
   border-radius: 10px;
-  width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   white-space: nowrap;
-  text-align: center;
+  min-width: 120px;
   transition: background-color 0.3s ease;
+}
+
+.audio-buttons button img,
+.audio-buttons button svg {
+  width: 20px;
+  height: 20px;
 }
 
 .audio-buttons button:hover {
