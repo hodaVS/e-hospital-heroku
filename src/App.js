@@ -201,15 +201,20 @@ function App() {
       <h1>Prescription Chatbot</h1>
       {error && <div className="error-message">{error}</div>}
 
-      <form className="form-container" onSubmit={handleTextSubmit}>
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Type your message..."
-        />
-        <button type="submit">Send</button>
-      </form>
+    <form className="form-container" onSubmit={handleTextSubmit}>
+      <textarea
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Type your message..."
+        rows="1" // Start with 1 row
+        style={{ resize: 'none' }} // Disable manual resizing (optional)
+        onInput={(e) => {
+          e.target.style.height = 'auto'; // Reset height to auto
+          e.target.style.height = `${e.target.scrollHeight}px`; // Set height to content size
+        }}
+      />
+      <button type="submit">Send</button>
+    </form>
 
       <div className="recording-controls">
         <button
