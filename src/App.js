@@ -82,7 +82,7 @@ function App() {
       return;
     }
 
-    setPrescription(response.data);  // Set directly from response.data
+    setPrescription(response.data);  
     setInput('');
   } catch (error) {
     console.error("Error sending message:", error);
@@ -197,24 +197,28 @@ function App() {
   };
 
   return (
-    <div className="app-container">
+  <div className="app-container">
       <h1>Prescription Chatbot</h1>
+      <p className="welcome-message">
+        Hello, for passing the prescription please write it on the text box or record your voice.
+      </p>
       {error && <div className="error-message">{error}</div>}
-
-    <form className="form-container" onSubmit={handleTextSubmit}>
-      <textarea
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Type your message..."
-        rows="1" // Start with 1 row
-        style={{ resize: 'none' }} // Disable manual resizing (optional)
-        onInput={(e) => {
-          e.target.style.height = 'auto'; // Reset height to auto
-          e.target.style.height = `${e.target.scrollHeight}px`; // Set height to content size
-        }}
-      />
-      <button type="submit">Send</button>
-    </form>
+  
+      <form className="form-container" onSubmit={handleTextSubmit}>
+        <textarea
+          ref={textareaRef}
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Type your message..."
+          rows="1"
+          style={{ resize: 'none' }}
+          onInput={(e) => {
+            e.target.style.height = 'auto';
+            e.target.style.height = `${e.target.scrollHeight}px`;
+          }}
+        />
+        <button type="submit">Send</button>
+      </form>
 
       <div className="recording-controls">
         <button
